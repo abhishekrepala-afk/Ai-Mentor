@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar";
 import { useAuth } from "../context/AuthContext";
 import { useSidebar } from "../context/SidebarContext";
 import { useTranslation } from "react-i18next";
+import API_BASE_URL from "../lib/api";
 import {
   Search,
   Bell,
@@ -343,9 +344,8 @@ const Dashboard = () => {
         <Header searchQuery={searchQuery} onSearchChange={setSearchQuery} />
         <Sidebar activePage="dashboard" />
         <div
-          className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${
-            sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
-          }`}
+          className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
+            }`}
         >
           <main className="flex-1 mt-10 overflow-x-hidden overflow-y-auto bg-canvas-alt p-6">
             <div className="flex items-center justify-center h-64">
@@ -365,9 +365,8 @@ const Dashboard = () => {
 
       {/* Main Content */}
       <div
-        className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${
-          sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
-        }`}
+        className={`flex-1 flex flex-col overflow-hidden transition-all duration-300 ${sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
+          }`}
       >
         {/* Header */}
 
@@ -379,24 +378,24 @@ const Dashboard = () => {
               {dynamicStatsCards.map((card, index) => {
                 const statLabelKeys = ["ongoing_courses", "completed", "certificates", "hours_spent"];
                 return (
-                <div
-                  key={index}
-                  className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/40 transition-all duration-300 cursor-pointer"
-                >
-                  <div className="flex items-center justify-between mb-4">
-                    <div className={`p-3 rounded-xl ${card.iconBg}`}>
-                      {card.icon}
+                  <div
+                    key={index}
+                    className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/40 transition-all duration-300 cursor-pointer"
+                  >
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`p-3 rounded-xl ${card.iconBg}`}>
+                        {card.icon}
+                      </div>
+                      <span className="text-sm font-medium text-green-600">
+                        {card.change}
+                      </span>
                     </div>
-                    <span className="text-sm font-medium text-green-600">
-                      {card.change}
-                    </span>
+                    <div className="text-2xl font-bold text-main mb-1">
+                      {card.value}
+                    </div>
+                    <div className="text-sm text-muted">{t(`dashboard.${statLabelKeys[index]}`)}</div>
                   </div>
-                  <div className="text-2xl font-bold text-main mb-1">
-                    {card.value}
-                  </div>
-                  <div className="text-sm text-muted">{t(`dashboard.${statLabelKeys[index]}`)}</div>
-                </div>
-              );
+                );
               })}
             </div>
 
@@ -412,7 +411,7 @@ const Dashboard = () => {
                       <div className="bg-card rounded-xl border border-border overflow-hidden shadow-sm h-full hover:shadow-lg hover:-translate-y-1 hover:border-teal-500/40 transition-all duration-300">
                         <div className="relative">
                           <img
-                            src={course.image}
+                            src={API_BASE_URL + course.image}
                             alt={course.title}
                             className="w-full h-40 object-cover"
                           />
@@ -485,7 +484,7 @@ const Dashboard = () => {
                                   className="flex items-center"
                                 >
                                   <img
-                                    src={course.image}
+                                    src={API_BASE_URL + course.image}
                                     alt={course.title}
                                     className="w-12 h-12 rounded-lg mr-4"
                                   />
@@ -537,7 +536,7 @@ const Dashboard = () => {
                             >
                               <div className="flex items-center min-w-0">
                                 <img
-                                  src={course.image}
+                                  src={API_BASE_URL + course.image}
                                   alt={course.title}
                                   className="w-12 h-12 rounded-lg mr-4"
                                 />
@@ -596,7 +595,7 @@ const Dashboard = () => {
                               className="flex items-center flex-1"
                             >
                               <img
-                                src={item.image}
+                                src={API_BASE_URL + item.image}
                                 alt={item.title}
                                 className="w-12 h-12 rounded-lg mr-4"
                               />
@@ -633,13 +632,13 @@ const Dashboard = () => {
                         ? "No in-progress courses match your search."
                         : "Start Learning to get your progress tracked!"}
                     </p>
-                    <button                      className="mt-4 px-4 py-2 bg-teal-500 text-white text-sm font-medium rounded-lg hover:bg-teal-600"
+                    <button className="mt-4 px-4 py-2 bg-teal-500 text-white text-sm font-medium rounded-lg hover:bg-teal-600"
                       onClick={() => navigate("/courses")}
                     >
                       My Courses
-                    </button> 
+                    </button>
                   </div>
-              )}
+                )}
               </div>
 
             </div>

@@ -118,9 +118,8 @@ const CoursesPage = () => {
       <Sidebar activePage="courses" />
 
       <div
-        className={`flex-1 flex flex-col transition-all duration-300 mt-10 ${
-          sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
-        }`}
+        className={`flex-1 flex flex-col transition-all duration-300 mt-10 ${sidebarCollapsed ? "lg:ml-20" : "lg:ml-80"
+          }`}
       >
         {/* ══════ HERO ══════ */}
         <div className="relative overflow-hidden bg-linear-to-br from-teal-700 via-teal-600 to-teal-800 pt-16 pb-12 px-4 sm:px-8">
@@ -154,22 +153,20 @@ const CoursesPage = () => {
             <div className="flex justify-center gap-3">
               <button
                 onClick={() => setActiveTab("my-courses")}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${
-                  activeTab === "my-courses"
-                    ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
-                    : "bg-black/30 text-white hover:bg-black/40"
-                }`}
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${activeTab === "my-courses"
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
+                  : "bg-black/30 text-white hover:bg-black/40"
+                  }`}
               >
                 <BookOpen className="w-4 h-4" />
                 Enrolled Courses
               </button>
               <button
                 onClick={() => setActiveTab("explore")}
-                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${
-                  activeTab === "explore"
-                    ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
-                    : "bg-black/30 text-white hover:bg-black/40"
-                }`}
+                className={`flex items-center gap-2 px-6 py-2.5 rounded-full font-semibold text-sm transition-all ${activeTab === "explore"
+                  ? "bg-indigo-600 text-white shadow-lg shadow-indigo-500/30"
+                  : "bg-black/30 text-white hover:bg-black/40"
+                  }`}
               >
                 <Search className="w-4 h-4" />
                 {t("courses.explore")}
@@ -205,7 +202,7 @@ const CoursesPage = () => {
                       className="bg-card rounded-3xl border border-border overflow-hidden shadow-sm"
                     >
                       <img
-                        src={course.image}
+                        src={API_BASE_URL + course.image}
                         alt={course.title}
                         className="h-40 w-full object-cover"
                       />
@@ -244,7 +241,7 @@ const CoursesPage = () => {
                     >
                       <div className="relative h-40">
                         <img
-                          src={course.image}
+                          src={API_BASE_URL + course.image}
                           className="w-full h-full object-cover"
                           alt={course.title}
                         />
@@ -300,7 +297,7 @@ const CoursesPage = () => {
             </button>
 
             <img
-              src={selectedCourse.image}
+              src={API_BASE_URL + selectedCourse.image}
               alt={selectedCourse.title}
               className="w-full h-40 object-cover rounded-xl mb-4"
             />
