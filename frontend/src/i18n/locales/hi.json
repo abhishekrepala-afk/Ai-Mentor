@@ -122,7 +122,13 @@
     "design": "डिज़ाइन",
     "beginner": "शुरुआती",
     "intermediate": "मध्यवर्ती",
-    "advanced": "उन्नत"
+    "advanced": "उन्नत",
+    "no_courses_search": "कोई भी कोर्स आपकी खोज से मेल नहीं खाता।",
+    "no_courses_enrolled": "आपने अभी तक किसी कोर्स में नामांकन नहीं किया है।",
+    "browse_courses": "कोर्स ब्राउज़ करें",
+    "continue_learning": "सीखना जारी रखें",
+    "continue": "जारी रखें",
+    "view": "देखें"
   },
   "courses": {
     "title": "लर्निंग हब",
@@ -132,7 +138,20 @@
     "not_enrolled": "आप अभी तक किसी कोर्स में नामांकित नहीं हैं।",
     "lessons": "पाठ",
     "loading": "कोर्सेस लोड हो रहे हैं...",
-    "confirm_enrollment": "नामांकन की पुष्टि करें"
+    "confirm_enrollment": "नामांकन की पुष्टि करें",
+    "enrolled_courses": "नामांकित कोर्स",
+    "enrolled_short": "नामांकित",
+    "explore_short": "एक्सप्लोर",
+    "filters": "फ़िल्टर",
+    "apply_filters": "फ़िल्टर लागू करें",
+    "clear_all": "सब साफ़ करें",
+    "category": "श्रेणी",
+    "skill_level": "कौशल स्तर",
+    "pricing": "मूल्य निर्धारण",
+    "any_level": "कोई भी स्तर",
+    "any_price": "कोई भी मूल्य",
+    "all_categories": "सभी श्रेणियाँ",
+    "no_match_filters": "कोई भी नामांकित कोर्स आपकी वर्तमान खोज या फ़िल्टर से मेल नहीं खाता।"
   },
   "learning": {
     "loading": "लोड हो रहा है...",

@@ -122,7 +122,13 @@
     "design": "Design",
     "beginner": "Debutant",
     "intermediate": "Intermediaire",
-    "advanced": "Avance"
+    "advanced": "Avance",
+    "no_courses_search": "Aucun cours ne correspond à votre recherche.",
+    "no_courses_enrolled": "Vous n'êtes inscrit à aucun cours pour l'instant.",
+    "browse_courses": "Parcourir les Cours",
+    "continue_learning": "Continuer l'Apprentissage",
+    "continue": "Continuer",
+    "view": "Voir"
   },
   "courses": {
     "title": "Centre d'Apprentissage",
@@ -132,7 +138,20 @@
     "not_enrolled": "Vous n'êtes inscrit à aucun cours pour l'instant.",
     "lessons": "leçons",
     "loading": "Chargement des cours...",
-    "confirm_enrollment": "Confirmer l'Inscription"
+    "confirm_enrollment": "Confirmer l'Inscription",
+    "enrolled_courses": "Cours Inscrits",
+    "enrolled_short": "Inscrit",
+    "explore_short": "Explorer",
+    "filters": "Filtres",
+    "apply_filters": "Appliquer les Filtres",
+    "clear_all": "Tout Effacer",
+    "category": "Catégorie",
+    "skill_level": "Niveau de Compétence",
+    "pricing": "Tarification",
+    "any_level": "Tout Niveau",
+    "any_price": "Tout Prix",
+    "all_categories": "Toutes les Catégories",
+    "no_match_filters": "Aucun cours inscrit ne correspond à votre recherche ou vos filtres actuels."
   },
   "learning": {
     "loading": "Chargement...",

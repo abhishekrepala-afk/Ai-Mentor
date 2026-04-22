@@ -122,7 +122,13 @@
     "design": "التصميم",
     "beginner": "مبتدئ",
     "intermediate": "متوسط",
-    "advanced": "متقدم"
+    "advanced": "متقدم",
+    "no_courses_search": "لا توجد دورات تطابق بحثك.",
+    "no_courses_enrolled": "لم تنضم إلى أي دورات بعد.",
+    "browse_courses": "تصفح الدورات",
+    "continue_learning": "مواصلة التعلم",
+    "continue": "متابعة",
+    "view": "عرض"
   },
   "courses": {
     "title": "مركز التعلم",
@@ -132,7 +138,20 @@
     "not_enrolled": "لم تسجل في أي دورة بعد.",
     "lessons": "درس",
     "loading": "جاري تحميل الدورات...",
-    "confirm_enrollment": "تأكيد التسجيل"
+    "confirm_enrollment": "تأكيد التسجيل",
+    "enrolled_courses": "الدورات المسجل فيها",
+    "enrolled_short": "مسجل",
+    "explore_short": "استكشاف",
+    "filters": "فلاتر",
+    "apply_filters": "تطبيق الفلاتر",
+    "clear_all": "مسح الكل",
+    "category": "الفئة",
+    "skill_level": "مستوى المهارة",
+    "pricing": "التسعير",
+    "any_level": "أي مستوى",
+    "any_price": "أي سعر",
+    "all_categories": "جميع الفئات",
+    "no_match_filters": "لا توجد دورات مسجلة تطابق بحثك أو فلاترك الحالية."
   },
   "learning": {
     "loading": "جاري التحميل...",

@@ -122,7 +122,13 @@
     "design": "Design",
     "beginner": "Beginner",
     "intermediate": "Intermediate",
-    "advanced": "Advanced"
+    "advanced": "Advanced",
+    "no_courses_search": "No courses match your search.",
+    "no_courses_enrolled": "You haven't enrolled in any courses yet.",
+    "browse_courses": "Browse Courses",
+    "continue_learning": "Continue Learning",
+    "continue": "Continue",
+    "view": "View"
   },
   "courses": {
     "title": "Learning Hub",
@@ -132,7 +138,20 @@
     "not_enrolled": "You have not enrolled in any courses yet.",
     "lessons": "lessons",
     "loading": "Loading courses...",
-    "confirm_enrollment": "Confirm Enrollment"
+    "confirm_enrollment": "Confirm Enrollment",
+    "enrolled_courses": "Enrolled Courses",
+    "enrolled_short": "Enrolled",
+    "explore_short": "Explore",
+    "filters": "Filters",
+    "apply_filters": "Apply Filters",
+    "clear_all": "Clear All",
+    "category": "Category",
+    "skill_level": "Skill Level",
+    "pricing": "Pricing",
+    "any_level": "Any Level",
+    "any_price": "Any Price",
+    "all_categories": "All Categories",
+    "no_match_filters": "No enrolled courses match your current search or filters."
   },
   "learning": {
     "loading": "Loading...",
@@ -274,7 +293,10 @@
     "signup": "Sign Up",
     "email": "Email",
     "password": "Password",
-    "logout": "Logout"
+    "logout": "Logout",
+    "logout_confirm_title": "Logout",
+    "logout_confirm_msg": "Are you sure you want to logout?",
+    "cancel": "Cancel"
   },
   "preferences": {
     "nav_title": "Preferences",
@@ -324,5 +346,24 @@
       "articles": "Reading Articles",
       "live_classes": "Live Classes"
     }
+  },
+  "certificates": {
+    "title": "My Certificates",
+    "subtitle": "Track your achievements and download certificates",
+    "loading": "Loading certificates...",
+    "enrolled_courses": "Enrolled Courses",
+    "courses_completed": "Courses Completed",
+    "certificates_earned": "Certificates Earned",
+    "in_progress": "In Progress",
+    "no_courses_title": "No courses enrolled yet",
+    "no_courses_desc": "Enroll in courses and complete them to earn your certificates!",
+    "browse_courses": "Browse Courses",
+    "progress": "Progress",
+    "lessons": "lessons",
+    "completed_badge": "COMPLETED",
+    "complete_to_earn": "Complete this course to earn your certificate",
+    "continue_learning": "Continue Learning",
+    "download": "Download Certificate",
+    "generating": "Generating..."
   }
 }

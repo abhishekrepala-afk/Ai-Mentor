@@ -122,7 +122,13 @@
     "design": "Design",
     "beginner": "Iniciante",
     "intermediate": "Intermediario",
-    "advanced": "Avancado"
+    "advanced": "Avancado",
+    "no_courses_search": "Nenhum curso corresponde à sua pesquisa.",
+    "no_courses_enrolled": "Você ainda não se matriculou em nenhum curso.",
+    "browse_courses": "Explorar Cursos",
+    "continue_learning": "Continuar Aprendendo",
+    "continue": "Continuar",
+    "view": "Ver"
   },
   "courses": {
     "title": "Central de Aprendizado",
@@ -132,7 +138,20 @@
     "not_enrolled": "Você ainda não está matriculado em nenhum curso.",
     "lessons": "aulas",
     "loading": "Carregando cursos...",
-    "confirm_enrollment": "Confirmar Matrícula"
+    "confirm_enrollment": "Confirmar Matrícula",
+    "enrolled_courses": "Cursos Matriculados",
+    "enrolled_short": "Matriculado",
+    "explore_short": "Explorar",
+    "filters": "Filtros",
+    "apply_filters": "Aplicar Filtros",
+    "clear_all": "Limpar Tudo",
+    "category": "Categoria",
+    "skill_level": "Nível de Habilidade",
+    "pricing": "Preços",
+    "any_level": "Qualquer Nível",
+    "any_price": "Qualquer Preço",
+    "all_categories": "Todas as Categorias",
+    "no_match_filters": "Nenhum curso matriculado corresponde à sua pesquisa ou filtros atuais."
   },
   "learning": {
     "loading": "Carregando...",

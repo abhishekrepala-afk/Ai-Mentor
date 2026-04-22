@@ -122,7 +122,13 @@
     "design": "Дизайн",
     "beginner": "Начинающий",
     "intermediate": "Средний",
-    "advanced": "Продвинутый"
+    "advanced": "Продвинутый",
+    "no_courses_search": "Курсы по вашему запросу не найдены.",
+    "no_courses_enrolled": "Вы ещё не записались ни на один курс.",
+    "browse_courses": "Просмотреть курсы",
+    "continue_learning": "Продолжить обучение",
+    "continue": "Продолжить",
+    "view": "Просмотр"
   },
   "courses": {
     "title": "Учебный центр",
@@ -132,7 +138,20 @@
     "not_enrolled": "Вы ещё не записаны ни на один курс.",
     "lessons": "уроков",
     "loading": "Загрузка курсов...",
-    "confirm_enrollment": "Подтвердить запись"
+    "confirm_enrollment": "Подтвердить запись",
+    "enrolled_courses": "Записанные курсы",
+    "enrolled_short": "Записан",
+    "explore_short": "Искать",
+    "filters": "Фильтры",
+    "apply_filters": "Применить фильтры",
+    "clear_all": "Очистить всё",
+    "category": "Категория",
+    "skill_level": "Уровень навыков",
+    "pricing": "Стоимость",
+    "any_level": "Любой уровень",
+    "any_price": "Любая цена",
+    "all_categories": "Все категории",
+    "no_match_filters": "Нет записанных курсов, соответствующих вашему поиску или фильтрам."
   },
   "learning": {
     "loading": "Загрузка...",

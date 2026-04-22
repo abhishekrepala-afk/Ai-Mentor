@@ -122,7 +122,13 @@
     "design": "设计",
     "beginner": "初级",
     "intermediate": "中级",
-    "advanced": "高级"
+    "advanced": "高级",
+    "no_courses_search": "没有课程符合您的搜索。",
+    "no_courses_enrolled": "您尚未报名任何课程。",
+    "browse_courses": "浏览课程",
+    "continue_learning": "继续学习",
+    "continue": "继续",
+    "view": "查看"
   },
   "courses": {
     "title": "学习中心",
@@ -132,7 +138,20 @@
     "not_enrolled": "您尚未报名任何课程。",
     "lessons": "课时",
     "loading": "正在加载课程...",
-    "confirm_enrollment": "确认报名"
+    "confirm_enrollment": "确认报名",
+    "enrolled_courses": "已报名课程",
+    "enrolled_short": "已报名",
+    "explore_short": "探索",
+    "filters": "筛选",
+    "apply_filters": "应用筛选",
+    "clear_all": "清除全部",
+    "category": "分类",
+    "skill_level": "技能等级",
+    "pricing": "定价",
+    "any_level": "任意级别",
+    "any_price": "任意价格",
+    "all_categories": "所有分类",
+    "no_match_filters": "没有已报名的课程与您当前的搜索或筛选条件匹配。"
   },
   "learning": {
     "loading": "加载中...",
