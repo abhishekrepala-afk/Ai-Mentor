@@ -14,7 +14,8 @@
     "learning": "学習",
     "watched": "視聴済み動画",
     "admin": "管理パネル",
-    "account": "アカウント"
+    "account": "アカウント",
+    "certificates": "証明書"
   },
   "common": {
     "cancel": "キャンセル",
@@ -35,7 +36,9 @@
       "notifications": "通知",
       "password_security": "パスワードとセキュリティ",
       "appearance": "外観",
-      "language": "言語"
+      "language": "言語",
+      "contactus": "サポートに連絡",
+      "delete_account": "アカウントを削除"
     },
     "profile": {
       "title": "プロフィール設定",
@@ -88,6 +91,12 @@
       "subtitle": "インターフェースの言語を選択してください",
       "interface_language": "インターフェース言語",
       "updated": "言語設定が正常に更新されました！"
+    },
+    "contactus": {
+      "title": "サポートに連絡",
+      "subtitle": "通常24時間以内にご返答いたします。",
+      "subject": "件名",
+      "message": "メッセージ"
     }
   },
   "dashboard": {
@@ -113,7 +122,14 @@
     "design": "デザイン",
     "beginner": "初心者",
     "intermediate": "中級",
-    "advanced": "上級"
+    "advanced": "上級",
+    "no_courses_search": "検索に一致するコースがありません。",
+    "no_courses_enrolled": "まだコースに登録していません。",
+    "browse_courses": "コースを探す",
+    "continue_learning": "学習を続ける",
+    "continue": "続ける",
+    "view": "表示",
+    "enroll": "登録する"
   },
   "courses": {
     "title": "ラーニングハブ",
@@ -123,7 +139,20 @@
     "not_enrolled": "まだコースに登録していません。",
     "lessons": "レッスン",
     "loading": "コースを読み込み中...",
-    "confirm_enrollment": "受講申し込みを確認"
+    "confirm_enrollment": "受講申し込みを確認",
+    "enrolled_courses": "受講中のコース",
+    "enrolled_short": "受講中",
+    "explore_short": "探す",
+    "filters": "フィルター",
+    "apply_filters": "フィルターを適用",
+    "clear_all": "すべてクリア",
+    "category": "カテゴリ",
+    "skill_level": "スキルレベル",
+    "pricing": "価格",
+    "any_level": "すべてのレベル",
+    "any_price": "すべての価格",
+    "all_categories": "すべてのカテゴリ",
+    "no_match_filters": "現在の検索またはフィルターに一致する登録済みコースはありません。"
   },
   "learning": {
     "loading": "読み込み中...",
@@ -265,7 +294,10 @@
     "signup": "サインアップ",
     "email": "メール",
     "password": "パスワード",
-    "logout": "ログアウト"
+    "logout": "ログアウト",
+    "logout_confirm_title": "ログアウト",
+    "logout_confirm_msg": "本当にログアウトしますか？",
+    "cancel": "キャンセル"
   },
   "preferences": {
     "nav_title": "設定",
@@ -315,5 +347,24 @@
       "articles": "記事を読む",
       "live_classes": "ライブクラス"
     }
+  },
+  "certificates": {
+    "title": "マイ証明書",
+    "subtitle": "実績を追跡して証明書をダウンロード",
+    "loading": "証明書を読み込み中...",
+    "enrolled_courses": "受講中のコース",
+    "courses_completed": "修了コース",
+    "certificates_earned": "取得済み証明書",
+    "in_progress": "進行中",
+    "no_courses_title": "まだコースに登録していません",
+    "no_courses_desc": "コースに登録して修了し、証明書を取得しましょう！",
+    "browse_courses": "コースを探す",
+    "progress": "進捗",
+    "lessons": "レッスン",
+    "completed_badge": "修了",
+    "complete_to_earn": "このコースを修了して証明書を取得してください",
+    "continue_learning": "学習を続ける",
+    "download": "証明書をダウンロード",
+    "generating": "生成中..."
   }
 }

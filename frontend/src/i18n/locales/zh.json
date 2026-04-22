@@ -14,7 +14,8 @@
     "learning": "学习",
     "watched": "已观看视频",
     "admin": "管理面板",
-    "account": "账户"
+    "account": "账户",
+    "certificates": "证书"
   },
   "common": {
     "cancel": "取消",
@@ -35,7 +36,9 @@
       "notifications": "通知",
       "password_security": "密码与安全",
       "appearance": "外观",
-      "language": "语言"
+      "language": "语言",
+      "contactus": "联系支持",
+      "delete_account": "删除我的账户"
     },
     "profile": {
       "title": "个人资料设置",
@@ -88,6 +91,12 @@
       "subtitle": "选择您的首选界面语言",
       "interface_language": "界面语言",
       "updated": "语言设置更新成功！"
+    },
+    "contactus": {
+      "title": "联系支持",
+      "subtitle": "我们通常在24小时内回复。",
+      "subject": "主题",
+      "message": "消息"
     }
   },
   "dashboard": {
@@ -113,7 +122,14 @@
     "design": "设计",
     "beginner": "初级",
     "intermediate": "中级",
-    "advanced": "高级"
+    "advanced": "高级",
+    "no_courses_search": "没有课程符合您的搜索。",
+    "no_courses_enrolled": "您尚未报名任何课程。",
+    "browse_courses": "浏览课程",
+    "continue_learning": "继续学习",
+    "continue": "继续",
+    "view": "查看",
+    "enroll": "报名"
   },
   "courses": {
     "title": "学习中心",
@@ -123,7 +139,20 @@
     "not_enrolled": "您尚未报名任何课程。",
     "lessons": "课时",
     "loading": "正在加载课程...",
-    "confirm_enrollment": "确认报名"
+    "confirm_enrollment": "确认报名",
+    "enrolled_courses": "已报名课程",
+    "enrolled_short": "已报名",
+    "explore_short": "探索",
+    "filters": "筛选",
+    "apply_filters": "应用筛选",
+    "clear_all": "清除全部",
+    "category": "分类",
+    "skill_level": "技能等级",
+    "pricing": "定价",
+    "any_level": "任意级别",
+    "any_price": "任意价格",
+    "all_categories": "所有分类",
+    "no_match_filters": "没有已报名的课程与您当前的搜索或筛选条件匹配。"
   },
   "learning": {
     "loading": "加载中...",
@@ -265,7 +294,10 @@
     "signup": "注册",
     "email": "电子邮件",
     "password": "密码",
-    "logout": "退出登录"
+    "logout": "退出登录",
+    "logout_confirm_title": "退出登录",
+    "logout_confirm_msg": "确定要退出登录吗？",
+    "cancel": "取消"
   },
   "preferences": {
     "nav_title": "偏好设置",
@@ -315,5 +347,24 @@
       "articles": "阅读文章",
       "live_classes": "直播课程"
     }
+  },
+  "certificates": {
+    "title": "我的证书",
+    "subtitle": "追踪您的成就并下载证书",
+    "loading": "正在加载证书...",
+    "enrolled_courses": "已报名课程",
+    "courses_completed": "已完成课程",
+    "certificates_earned": "已获得证书",
+    "in_progress": "进行中",
+    "no_courses_title": "尚未报名任何课程",
+    "no_courses_desc": "报名并完成课程以获得您的证书！",
+    "browse_courses": "浏览课程",
+    "progress": "进度",
+    "lessons": "课时",
+    "completed_badge": "已完成",
+    "complete_to_earn": "完成此课程以获得您的证书",
+    "continue_learning": "继续学习",
+    "download": "下载证书",
+    "generating": "生成中..."
   }
 }

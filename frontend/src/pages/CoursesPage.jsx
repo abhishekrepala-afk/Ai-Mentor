@@ -259,8 +259,8 @@ const CoursesPage = () => {
                     }`}
                 >
                   <BookOpen className="w-4 h-4 shrink-0 hidden sm:block" />
-                  <span className="hidden sm:inline truncate">Enrolled Courses</span>
-                  <span className="sm:hidden truncate">Enrolled</span>
+                  <span className="hidden sm:inline truncate">{t("courses.enrolled_courses")}</span>
+                  <span className="sm:hidden truncate">{t("courses.enrolled_short")}</span>
                 </button>
                 <button
                   onClick={() => setActiveTab("explore")}
@@ -271,7 +271,7 @@ const CoursesPage = () => {
                 >
                   <Search className="w-4 h-4 shrink-0 hidden sm:block" />
                   <span className="hidden sm:inline truncate">{t("courses.explore")}</span>
-                  <span className="sm:hidden truncate">Explore</span>
+                  <span className="sm:hidden truncate">{t("courses.explore_short")}</span>
                 </button>
               </div>
 
@@ -288,7 +288,7 @@ const CoursesPage = () => {
                       }`}
                   >
                     <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" /></svg>
-                    <span className="hidden sm:inline ml-2">{t("Filters", { defaultValue: "Filters" })}</span>
+                    <span className="hidden sm:inline ml-2">{t("courses.filters")}</span>
                     {getActiveFilterCount() > 0 && (
                       <span className="absolute -top-1.5 -right-1.5 sm:static sm:ml-1.5 bg-white text-teal-700 text-[11px] leading-none rounded-full w-5 h-5 flex items-center justify-center font-black shadow-md border-2 border-teal-700 z-10">
                         {getActiveFilterCount()}
@@ -314,7 +314,7 @@ const CoursesPage = () => {
                                 onClick={() => setFilters({ category: [], level: [], price: [] })}
                                 className="text-[10px] font-black uppercase tracking-wider text-red-400 hover:text-red-300 transition-colors bg-red-400/10 hover:bg-red-400/20 px-3 py-1.5 rounded-full"
                               >
-                                Clear All
+                                {t("courses.clear_all")}
                               </button>
                             )}
                             <button
@@ -329,7 +329,7 @@ const CoursesPage = () => {
                         <div className="space-y-6">
                           {/* Categories */}
                           <div>
-                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">Category</label>
+                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">{t("courses.category")}</label>
                             <div className="flex flex-wrap gap-3">
                               <button
                                 onClick={() => setFilters({ ...filters, category: [] })}
@@ -338,7 +338,7 @@ const CoursesPage = () => {
                                     : "bg-teal-900/30 text-teal-100 hover:bg-teal-500/20 border border-teal-500/30"
                                   }`}
                               >
-                                All Categories
+                                {t("courses.all_categories")}
                               </button>
                               {availableCategories.filter(cat => cat !== "All").map(cat => (
                                 <button
@@ -357,7 +357,7 @@ const CoursesPage = () => {
 
                           {/* Skill Level */}
                           <div>
-                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">Skill Level</label>
+                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">{t("courses.skill_level")}</label>
                             <div className="flex flex-wrap gap-3">
                               <button
                                 onClick={() => setFilters({ ...filters, level: [] })}
@@ -366,7 +366,7 @@ const CoursesPage = () => {
                                     : "bg-teal-900/30 text-teal-100 hover:bg-teal-500/20 border border-teal-500/30"
                                   }`}
                               >
-                                Any Level
+                                {t("courses.any_level")}
                               </button>
                               {availableLevels.map(lvl => (
                                 <button
@@ -385,7 +385,7 @@ const CoursesPage = () => {
 
                           {/* Pricing */}
                           <div>
-                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">Pricing</label>
+                            <label className="block text-[10px] font-black text-teal-200/70 uppercase tracking-widest mb-4">{t("courses.pricing")}</label>
                             <div className="flex gap-3">
                               <button
                                 onClick={() => setFilters({ ...filters, price: [] })}
@@ -394,7 +394,7 @@ const CoursesPage = () => {
                                     : "bg-teal-900/30 text-teal-100 hover:bg-teal-500/20 border border-teal-500/30"
                                   }`}
                               >
-                                Any Price
+                                {t("courses.any_price")}
                               </button>
                               {availablePrices.map(p => (
                                 <button
@@ -417,7 +417,7 @@ const CoursesPage = () => {
                           onClick={() => setShowFilters(false)}
                           className="w-full mt-6 py-3 px-4 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-xl font-bold text-sm tracking-wide shadow-lg shadow-teal-500/25 hover:scale-[1.02] transition-all"
                         >
-                          Apply Filters
+                          {t("courses.apply_filters")}
                         </button>
                       </div>
                     </>
@@ -454,7 +454,7 @@ const CoursesPage = () => {
               )}
               {myCourses.length > 0 && filteredMyCourses.length === 0 && (
                 <p className="text-slate-500 col-span-full">
-                  No enrolled courses match your current search or filters.
+                  {t("courses.no_match_filters")}
                 </p>
               )}
 

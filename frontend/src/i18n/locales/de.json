@@ -14,7 +14,8 @@
     "learning": "Lernen",
     "watched": "Gesehene Videos",
     "admin": "Admin-Panel",
-    "account": "Konto"
+    "account": "Konto",
+    "certificates": "Zertifikate"
   },
   "common": {
     "cancel": "Abbrechen",
@@ -35,7 +36,9 @@
       "notifications": "Benachrichtigungen",
       "password_security": "Passwort & Sicherheit",
       "appearance": "Erscheinungsbild",
-      "language": "Sprache"
+      "language": "Sprache",
+      "contactus": "Support kontaktieren",
+      "delete_account": "Konto löschen"
     },
     "profile": {
       "title": "Profileinstellungen",
@@ -88,6 +91,12 @@
       "subtitle": "Wählen Sie Ihre bevorzugte Schnittstellensprache",
       "interface_language": "Schnittstellensprache",
       "updated": "Spracheinstellungen erfolgreich aktualisiert!"
+    },
+    "contactus": {
+      "title": "Support kontaktieren",
+      "subtitle": "Wir antworten normalerweise innerhalb von 24 Stunden.",
+      "subject": "Betreff",
+      "message": "Nachricht"
     }
   },
   "dashboard": {
@@ -113,7 +122,14 @@
     "design": "Design",
     "beginner": "Anfänger",
     "intermediate": "Mittelstufe",
-    "advanced": "Fortgeschritten"
+    "advanced": "Fortgeschritten",
+    "no_courses_search": "Keine Kurse entsprechen deiner Suche.",
+    "no_courses_enrolled": "Du hast dich noch in keinen Kursen angemeldet.",
+    "browse_courses": "Kurse durchsuchen",
+    "continue_learning": "Weiterlernen",
+    "continue": "Weiter",
+    "view": "Ansehen",
+    "enroll": "Einschreiben"
   },
   "courses": {
     "title": "Lernzentrum",
@@ -123,7 +139,20 @@
     "not_enrolled": "Sie sind noch in keinem Kurs eingeschrieben.",
     "lessons": "Lektionen",
     "loading": "Kurse werden geladen...",
-    "confirm_enrollment": "Einschreibung bestätigen"
+    "confirm_enrollment": "Einschreibung bestätigen",
+    "enrolled_courses": "Angemeldete Kurse",
+    "enrolled_short": "Angemeldet",
+    "explore_short": "Erkunden",
+    "filters": "Filter",
+    "apply_filters": "Filter anwenden",
+    "clear_all": "Alle löschen",
+    "category": "Kategorie",
+    "skill_level": "Schwierigkeitsgrad",
+    "pricing": "Preis",
+    "any_level": "Jedes Level",
+    "any_price": "Jeder Preis",
+    "all_categories": "Alle Kategorien",
+    "no_match_filters": "Keine angemeldeten Kurse entsprechen deiner aktuellen Suche oder Filtern."
   },
   "learning": {
     "loading": "Laden...",
@@ -265,7 +294,10 @@
     "signup": "Registrieren",
     "email": "E-Mail",
     "password": "Passwort",
-    "logout": "Abmelden"
+    "logout": "Abmelden",
+    "logout_confirm_title": "Abmelden",
+    "logout_confirm_msg": "Möchtest du dich wirklich abmelden?",
+    "cancel": "Abbrechen"
   },
   "preferences": {
     "nav_title": "Einstellungen",
@@ -315,5 +347,24 @@
       "articles": "Artikel lesen",
       "live_classes": "Live-Klassen"
     }
+  },
+  "certificates": {
+    "title": "Meine Zertifikate",
+    "subtitle": "Verfolge deine Erfolge und lade Zertifikate herunter",
+    "loading": "Zertifikate werden geladen...",
+    "enrolled_courses": "Angemeldete Kurse",
+    "courses_completed": "Abgeschlossene Kurse",
+    "certificates_earned": "Verdiente Zertifikate",
+    "in_progress": "In Bearbeitung",
+    "no_courses_title": "Noch keine Kurse angemeldet",
+    "no_courses_desc": "Melde dich für Kurse an und schließe sie ab, um deine Zertifikate zu verdienen!",
+    "browse_courses": "Kurse durchsuchen",
+    "progress": "Fortschritt",
+    "lessons": "Lektionen",
+    "completed_badge": "ABGESCHLOSSEN",
+    "complete_to_earn": "Schließe diesen Kurs ab, um dein Zertifikat zu erhalten",
+    "continue_learning": "Weiterlernen",
+    "download": "Zertifikat herunterladen",
+    "generating": "Wird generiert..."
   }
 }

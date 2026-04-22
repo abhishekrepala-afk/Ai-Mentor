@@ -442,7 +442,7 @@ const Dashboard = () => {
               onClick={() => navigate(`/course-preview/${course.id}`)}
               className="px-3 py-1.5 text-xs bg-teal-500 text-white rounded-lg hover:bg-teal-600"
             >
-              Enroll
+              {t("dashboard.enroll")}
             </button>
           </div>
         </div>
@@ -458,7 +458,7 @@ const Dashboard = () => {
 
               {/* My Courses Table */}
               <div className="xl:col-span-2 flex flex-col">
-                <h2 className="text-xl font-bold text-main mb-6">My Courses</h2>
+                <h2 className="text-xl font-bold text-main mb-6">{t("dashboard.my_courses")}</h2>
                 <div className="bg-card rounded-xl border border-border overflow-hidden">
                   <div className="overflow-x-auto">
                     {filteredMyCourses.length !== 0 ? (
@@ -466,16 +466,16 @@ const Dashboard = () => {
                         <thead className="bg-canvas-alt">
                           <tr>
                             <th className="px-4 py-4 text-left text-sm font-medium text-muted">
-                              Course
+                              {t("dashboard.course")}
                             </th>
                             <th className="px-4 py-4 text-left text-sm font-medium text-muted">
-                              Progress
+                              {t("dashboard.progress")}
                             </th>
                             <th className="px-4 py-4 text-left text-sm font-medium text-muted">
-                              Lessons
+                              {t("dashboard.lessons")}
                             </th>
                             <th className="px-4 py-4 text-left text-sm font-medium text-muted">
-                              Level
+                              {t("dashboard.level")}
                             </th>
                           </tr>
                         </thead>
@@ -557,7 +557,7 @@ const Dashboard = () => {
                                 onClick={() => navigate(`/course-preview/${course.id}`)}
                                 className="ml-3 px-3 py-2 bg-teal-500 text-white text-xs font-medium rounded-lg hover:bg-teal-600"
                               >
-                                View
+                                {t("dashboard.view")}
                               </button>
                             </div>
                           ))}
@@ -567,14 +567,14 @@ const Dashboard = () => {
                       <div className="p-6 text-center text-muted">
                         <p>
                           {normalizedSearchQuery
-                            ? "No courses match your search."
-                            : "You haven't enrolled in any courses yet."}
+                            ? t("dashboard.no_courses_search")
+                            : t("dashboard.no_courses_enrolled")}
                         </p>
                         <button
                           className="mt-4 px-4 py-2 bg-teal-500 text-white text-sm font-medium rounded-lg hover:bg-teal-600"
                           onClick={handleBrowseCourses}
                         >
-                          Browse Courses
+                          {t("dashboard.browse_courses")}
                         </button>
                       </div>
                     )}
@@ -585,7 +585,7 @@ const Dashboard = () => {
                 {filteredContinueLearning.length !== 0 ? (
                   <div>
                     <h2 className="text-xl font-bold text-main mt-6 mb-6">
-                      Continue Learning
+                      {t("dashboard.continue_learning")}
                     </h2>
                     <div className="space-y-4">
                       {filteredContinueLearning.map((item, index) => (
@@ -622,7 +622,7 @@ const Dashboard = () => {
                               to={`/learning/${item.id}`}
                               className="ml-4 px-4 py-2 bg-teal-500 text-white text-sm font-medium rounded-lg hover:bg-teal-600"
                             >
-                              Continue
+                              {t("dashboard.continue")}
                             </Link>
                           </div>
                         </div>

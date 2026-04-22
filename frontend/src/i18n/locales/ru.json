@@ -14,7 +14,8 @@
     "learning": "Обучение",
     "watched": "Просмотренные видео",
     "admin": "Панель администратора",
-    "account": "Аккаунт"
+    "account": "Аккаунт",
+    "certificates": "Сертификаты"
   },
   "common": {
     "cancel": "Отмена",
@@ -35,7 +36,9 @@
       "notifications": "Уведомления",
       "password_security": "Пароль и безопасность",
       "appearance": "Внешний вид",
-      "language": "Язык"
+      "language": "Язык",
+      "contactus": "Связаться с поддержкой",
+      "delete_account": "Удалить мой аккаунт"
     },
     "profile": {
       "title": "Настройки профиля",
@@ -88,6 +91,12 @@
       "subtitle": "Выберите предпочтительный язык интерфейса",
       "interface_language": "Язык интерфейса",
       "updated": "Настройки языка успешно обновлены!"
+    },
+    "contactus": {
+      "title": "Связаться с поддержкой",
+      "subtitle": "Мы обычно отвечаем в течение 24 часов.",
+      "subject": "Тема",
+      "message": "Сообщение"
     }
   },
   "dashboard": {
@@ -113,7 +122,14 @@
     "design": "Дизайн",
     "beginner": "Начинающий",
     "intermediate": "Средний",
-    "advanced": "Продвинутый"
+    "advanced": "Продвинутый",
+    "no_courses_search": "Курсы по вашему запросу не найдены.",
+    "no_courses_enrolled": "Вы ещё не записались ни на один курс.",
+    "browse_courses": "Просмотреть курсы",
+    "continue_learning": "Продолжить обучение",
+    "continue": "Продолжить",
+    "view": "Просмотр",
+    "enroll": "Записаться"
   },
   "courses": {
     "title": "Учебный центр",
@@ -123,7 +139,20 @@
     "not_enrolled": "Вы ещё не записаны ни на один курс.",
     "lessons": "уроков",
     "loading": "Загрузка курсов...",
-    "confirm_enrollment": "Подтвердить запись"
+    "confirm_enrollment": "Подтвердить запись",
+    "enrolled_courses": "Записанные курсы",
+    "enrolled_short": "Записан",
+    "explore_short": "Искать",
+    "filters": "Фильтры",
+    "apply_filters": "Применить фильтры",
+    "clear_all": "Очистить всё",
+    "category": "Категория",
+    "skill_level": "Уровень навыков",
+    "pricing": "Стоимость",
+    "any_level": "Любой уровень",
+    "any_price": "Любая цена",
+    "all_categories": "Все категории",
+    "no_match_filters": "Нет записанных курсов, соответствующих вашему поиску или фильтрам."
   },
   "learning": {
     "loading": "Загрузка...",
@@ -265,7 +294,10 @@
     "signup": "Зарегистрироваться",
     "email": "Электронная почта",
     "password": "Пароль",
-    "logout": "Выйти"
+    "logout": "Выйти",
+    "logout_confirm_title": "Выйти",
+    "logout_confirm_msg": "Вы уверены, что хотите выйти?",
+    "cancel": "Отмена"
   },
   "preferences": {
     "nav_title": "Настройки",
@@ -315,5 +347,24 @@
       "articles": "Чтение статей",
       "live_classes": "Живые занятия"
     }
+  },
+  "certificates": {
+    "title": "Мои сертификаты",
+    "subtitle": "Отслеживайте достижения и скачивайте сертификаты",
+    "loading": "Загрузка сертификатов...",
+    "enrolled_courses": "Записанные курсы",
+    "courses_completed": "Завершённые курсы",
+    "certificates_earned": "Полученные сертификаты",
+    "in_progress": "В процессе",
+    "no_courses_title": "Вы ещё не записались ни на один курс",
+    "no_courses_desc": "Запишитесь на курсы и завершите их, чтобы получить сертификаты!",
+    "browse_courses": "Просмотреть курсы",
+    "progress": "Прогресс",
+    "lessons": "уроков",
+    "completed_badge": "ЗАВЕРШЁН",
+    "complete_to_earn": "Завершите этот курс, чтобы получить сертификат",
+    "continue_learning": "Продолжить обучение",
+    "download": "Скачать сертификат",
+    "generating": "Генерация..."
   }
 }

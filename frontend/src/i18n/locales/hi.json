@@ -14,7 +14,8 @@
     "learning": "शिक्षा",
     "watched": "देखे गए वीडियो",
     "admin": "एडमिन पैनल",
-    "account": "खाता"
+    "account": "खाता",
+    "certificates": "प्रमाणपत्र"
   },
   "common": {
     "cancel": "रद्द करें",
@@ -35,7 +36,9 @@
       "notifications": "सूचनाएं",
       "password_security": "पासवर्ड और सुरक्षा",
       "appearance": "उपस्थिति",
-      "language": "भाषा"
+      "language": "भाषा",
+      "contactus": "सहायता से संपर्क करें",
+      "delete_account": "मेरा खाता हटाएं"
     },
     "profile": {
       "title": "प्रोफ़ाइल सेटिंग्स",
@@ -88,6 +91,12 @@
       "subtitle": "इंटरफेस के लिए अपनी पसंदीदा भाषा चुनें",
       "interface_language": "इंटरफेस भाषा",
       "updated": "भाषा सेटिंग्स सफलतापूर्वक अपडेट हो गईं!"
+    },
+    "contactus": {
+      "title": "सहायता से संपर्क करें",
+      "subtitle": "हम आमतौर पर 24 घंटों के भीतर जवाब देते हैं।",
+      "subject": "विषय",
+      "message": "संदेश"
     }
   },
   "dashboard": {
@@ -113,7 +122,14 @@
     "design": "डिज़ाइन",
     "beginner": "शुरुआती",
     "intermediate": "मध्यवर्ती",
-    "advanced": "उन्नत"
+    "advanced": "उन्नत",
+    "no_courses_search": "कोई भी कोर्स आपकी खोज से मेल नहीं खाता।",
+    "no_courses_enrolled": "आपने अभी तक किसी कोर्स में नामांकन नहीं किया है।",
+    "browse_courses": "कोर्स ब्राउज़ करें",
+    "continue_learning": "सीखना जारी रखें",
+    "continue": "जारी रखें",
+    "view": "देखें",
+    "enroll": "नामांकन करें"
   },
   "courses": {
     "title": "लर्निंग हब",
@@ -123,7 +139,20 @@
     "not_enrolled": "आप अभी तक किसी कोर्स में नामांकित नहीं हैं।",
     "lessons": "पाठ",
     "loading": "कोर्सेस लोड हो रहे हैं...",
-    "confirm_enrollment": "नामांकन की पुष्टि करें"
+    "confirm_enrollment": "नामांकन की पुष्टि करें",
+    "enrolled_courses": "नामांकित कोर्स",
+    "enrolled_short": "नामांकित",
+    "explore_short": "एक्सप्लोर",
+    "filters": "फ़िल्टर",
+    "apply_filters": "फ़िल्टर लागू करें",
+    "clear_all": "सब साफ़ करें",
+    "category": "श्रेणी",
+    "skill_level": "कौशल स्तर",
+    "pricing": "मूल्य निर्धारण",
+    "any_level": "कोई भी स्तर",
+    "any_price": "कोई भी मूल्य",
+    "all_categories": "सभी श्रेणियाँ",
+    "no_match_filters": "कोई भी नामांकित कोर्स आपकी वर्तमान खोज या फ़िल्टर से मेल नहीं खाता।"
   },
   "learning": {
     "loading": "लोड हो रहा है...",
@@ -265,7 +294,10 @@
     "signup": "साइन अप",
     "email": "ईमेल",
     "password": "पासवर्ड",
-    "logout": "लॉगआउट"
+    "logout": "लॉगआउट",
+    "logout_confirm_title": "लॉगआउट",
+    "logout_confirm_msg": "क्या आप वाकई लॉगआउट करना चाहते हैं?",
+    "cancel": "रद्द करें"
   },
   "preferences": {
     "nav_title": "प्राथमिकताएं",
@@ -315,5 +347,24 @@
       "articles": "लेख पढ़ना",
       "live_classes": "लाइव कक्षाएं"
     }
+  },
+  "certificates": {
+    "title": "मेरे प्रमाणपत्र",
+    "subtitle": "अपनी उपलब्धियों को ट्रैक करें और प्रमाणपत्र डाउनलोड करें",
+    "loading": "प्रमाणपत्र लोड हो रहे हैं...",
+    "enrolled_courses": "नामांकित कोर्स",
+    "courses_completed": "पूर्ण किए गए कोर्स",
+    "certificates_earned": "अर्जित प्रमाणपत्र",
+    "in_progress": "प्रगति में",
+    "no_courses_title": "अभी तक कोई कोर्स नामांकित नहीं",
+    "no_courses_desc": "कोर्स में नामांकन करें और उन्हें पूरा करके अपने प्रमाणपत्र अर्जित करें!",
+    "browse_courses": "कोर्स ब्राउज़ करें",
+    "progress": "प्रगति",
+    "lessons": "पाठ",
+    "completed_badge": "पूर्ण",
+    "complete_to_earn": "अपना प्रमाणपत्र अर्जित करने के लिए यह कोर्स पूरा करें",
+    "continue_learning": "सीखना जारी रखें",
+    "download": "प्रमाणपत्र डाउनलोड करें",
+    "generating": "बन रहा है..."
   }
 }
