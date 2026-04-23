@@ -262,12 +262,8 @@ export default function CoursePreview() {
           // ✅ refresh header data
           await fetchUserProfile();
 
-          // ✅ update notifications + badge
+          // ✅ update notifications
           window.dispatchEvent(new Event("refreshNotifications"));
-
-          // (optional but recommended)
-          window.dispatchEvent(new Event("refreshUnreadCount"));
-
           // ✅ redirect user
           navigate(`/courses/${selectedCourse.id}`);
           return;
