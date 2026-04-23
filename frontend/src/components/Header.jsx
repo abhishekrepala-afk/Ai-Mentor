@@ -239,10 +239,7 @@ const Header = () => {
                           key={notif.id}
                           notification={notif}
                           onClick={(n) => {
-                            console.log("Clicked notification:", n);
                             markAsRead(n.id);
-
-
                           }}
 
                         />
