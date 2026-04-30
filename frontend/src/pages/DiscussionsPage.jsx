@@ -248,6 +248,21 @@ const DiscussionsPage = () => {
     [token]
   );
 
+const latestPostsByCourse = Object.values(
+  coursePosts
+    .filter((post) => isAdmin || !post.hiddenAt)
+    .reduce((acc, post) => {
+      if (!post.courseId) return acc;
+
+      // First occurrence = latest (because order based on createdAt attribute)
+      if (!acc[post.courseId]) {
+        acc[post.courseId] = post;
+      }
+
+      return acc;
+    }, {})
+);
+  
   // Course panel - posts for a specific course
   const fetchPanelPosts = useCallback(
     async (courseId, sort) => {
@@ -933,8 +948,7 @@ const DiscussionsPage = () => {
                 ) : (
                   <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-                      {coursePosts
-                        .filter((post) => isAdmin || !post.hiddenAt)
+                      {latestPostsByCourse
                         .map((post) => (
                         <div
                           key={post.id}
