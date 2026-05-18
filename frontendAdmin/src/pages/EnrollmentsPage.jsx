@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { callApi } from "../utils/api";
-import * as XLSX from "xlsx";
+import ExcelJS from "exceljs";
 import { saveAs } from "file-saver";
 import jsPDF from "jspdf";
 import autoTable from "jspdf-autotable";
@@ -37,46 +37,93 @@ function EnrollmentsPage() {
     fetchEnrollments();
   }, []);
 
-  // Excel Export
-  const exportToExcel = () => {
-    const excelData = enrollments.map((enrollment) => ({
-      Student: enrollment.user,
-      Course: enrollment.course,
-      Date: enrollment.date
-        ? new Date(enrollment.date).toLocaleDateString()
-        : "N/A",
-      Amount: `Rs ${enrollment.amount}`,
-      Status: enrollment.status || "Completed",
-    }));
+  // =========================
+  // Excel Export (ExcelJS)
+  // =========================
+  const exportToExcel = async () => {
+    try {
+      const excelData = enrollments.map((enrollment) => ({
+        Student: enrollment.user || "N/A",
+        Email: enrollment.email || "N/A",
+        Course: enrollment.course || "N/A",
+        Date: enrollment.date
+          ? new Date(enrollment.date).toLocaleDateString()
+          : "N/A",
+        Amount: `Rs ${enrollment.amount ?? 0}`,
+        Status: enrollment.status || "Completed",
+      }));
 
-    const worksheet = XLSX.utils.json_to_sheet(excelData);
+      // Create workbook and worksheet
+      const workbook = new ExcelJS.Workbook();
+      const worksheet = workbook.addWorksheet("Enrollments");
 
-    const workbook = XLSX.utils.book_new();
+      // Define columns
+      worksheet.columns = [
+        { header: "Student", key: "Student", width: 25 },
+        { header: "Email", key: "Email", width: 30 },
+        { header: "Course", key: "Course", width: 30 },
+        { header: "Date", key: "Date", width: 15 },
+        { header: "Amount", key: "Amount", width: 15 },
+        { header: "Status", key: "Status", width: 20 },
+      ];
 
-    XLSX.utils.book_append_sheet(
-      workbook,
-      worksheet,
-      "Enrollments"
-    );
+      // Add rows
+      excelData.forEach((row) => {
+        worksheet.addRow(row);
+      });
 
-    const excelBuffer = XLSX.write(workbook, {
-      bookType: "xlsx",
-      type: "array",
-    });
+      // Style header row
+      const headerRow = worksheet.getRow(1);
+      headerRow.font = {
+        bold: true,
+        color: { argb: "FFFFFFFF" },
+      };
+      headerRow.fill = {
+        type: "pattern",
+        pattern: "solid",
+        fgColor: { argb: "4472C4" },
+      };
+      headerRow.alignment = {
+        horizontal: "center",
+        vertical: "middle",
+      };
 
-    const fileData = new Blob([excelBuffer], {
-      type: "application/octet-stream",
-    });
+      // Center all cells
+      worksheet.eachRow((row) => {
+        row.eachCell((cell) => {
+          cell.alignment = {
+            vertical: "middle",
+            horizontal: "center",
+          };
+        });
+      });
 
-    saveAs(fileData, "Enrollments_Report.xlsx");
+      // Generate Excel buffer
+      const buffer = await workbook.xlsx.writeBuffer();
+
+      // Create blob
+      const blob = new Blob([buffer], {
+        type:
+          "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      });
+
+      // Download file
+      saveAs(blob, "Enrollments_Report.xlsx");
+    } catch (err) {
+      console.error("Error exporting Excel:", err);
+      alert("Failed to export Excel file.");
+    }
   };
 
+  // =========================
   // PDF Export
+  // =========================
   const exportToPDF = () => {
     const doc = new jsPDF();
 
     const tableColumn = [
       "Student",
+      "Email",
       "Course",
       "Date",
       "Amount",
@@ -84,39 +131,50 @@ function EnrollmentsPage() {
     ];
 
     const tableRows = enrollments.map((enrollment) => [
-      enrollment.user,
-      enrollment.course,
+      enrollment.user || "N/A",
+      enrollment.email || "N/A",
+      enrollment.course || "N/A",
       enrollment.date
         ? new Date(enrollment.date).toLocaleDateString()
         : "N/A",
-      `Rs ${enrollment.amount}`,
+      `Rs ${enrollment.amount ?? 0}`,
       enrollment.status || "Completed",
     ]);
 
+    doc.setFontSize(16);
     doc.text("Enrollments Report", 14, 15);
 
     autoTable(doc, {
       head: [tableColumn],
       body: tableRows,
       startY: 25,
+      styles: {
+        fontSize: 9,
+        halign: "center",
+      },
+      headStyles: {
+        fillColor: [68, 114, 196],
+      },
     });
 
     doc.save("Enrollments_Report.pdf");
   };
 
-  if (loading)
+  if (loading) {
     return (
       <div className="p-10 text-center text-muted">
         Loading enrollments...
       </div>
     );
+  }
 
-  if (error)
+  if (error) {
     return (
       <div className="p-10 text-center text-red-500">
         Error: {error}
       </div>
     );
+  }
 
   return (
     <>
@@ -162,10 +220,11 @@ function EnrollmentsPage() {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full min-w-215">
+        <table className="w-full min-w-[900px]">
           <thead className="text-left text-xs uppercase tracking-wider text-muted">
             <tr className="border-b border-border">
               <th className="p-5">Student</th>
+              <th>Email</th>
               <th>Course</th>
               <th>Date</th>
               <th>Amount</th>
@@ -184,11 +243,9 @@ function EnrollmentsPage() {
                     <div className="font-medium">
                       {enrollment.user}
                     </div>
-
-                    <div className="text-xs text-muted">
-                      {enrollment.email}
-                    </div>
                   </td>
+
+                  <td>{enrollment.email}</td>
 
                   <td>{enrollment.course}</td>
 
@@ -212,7 +269,7 @@ function EnrollmentsPage() {
             ) : (
               <tr>
                 <td
-                  colSpan="5"
+                  colSpan="6"
                   className="p-10 text-center text-muted italic"
                 >
                   No enrollments found.
