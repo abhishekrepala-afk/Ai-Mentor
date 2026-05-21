@@ -1,19 +1,20 @@
 import express from "express";
 import Stripe from "stripe";
+import {protect} from "../middleware/authMiddleware.js";
 
 const router = express.Router();
 
-// ✅ Initialize Stripe safely
+// Initialize Stripe
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
-// ✅ CREATE CHECKOUT SESSION
-router.post("/create-checkout-session", async (req, res) => {
+// CREATE CHECKOUT SESSION
+router.post("/create-checkout-session", protect, async (req, res) => {
   try {
     const { course } = req.body;
 
     console.log("Incoming course:", course);
 
-    // ✅ Validate course data
+    // Validate course data
     if (
       !course ||
       !course.id ||
@@ -26,16 +27,21 @@ router.post("/create-checkout-session", async (req, res) => {
       });
     }
 
-    // ✅ Convert price safely (₹ → paise)
+    // Convert ₹ to paise
     const amount = Math.round(Number(course.priceValue) * 100);
 
-    // ✅ Build success URL
-    const successUrl = `${process.env.FRONTEND_URL}/success?courseId=${course.id}&title=${encodeURIComponent(course.title)}`;
+    // Build success URL
+    const successUrl = `${
+      process.env.FRONTEND_URL
+    }/success?courseId=${course.id}&title=${encodeURIComponent(
+      course.title
+    )}`;
 
-    console.log("✅ SUCCESS URL:", successUrl); // 🔥 DEBUG
+    console.log("✅ SUCCESS URL:", successUrl);
 
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
+
       mode: "payment",
 
       line_items: [
@@ -51,8 +57,9 @@ router.post("/create-checkout-session", async (req, res) => {
         },
       ],
 
-      // ✅ pass metadata (VERY IMPORTANT for future webhook)
+      // Important metadata
       metadata: {
+        userId: req.user.id,
         courseId: course.id.toString(),
         courseTitle: course.title,
       },

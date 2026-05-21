@@ -41,7 +41,14 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
+// ================= STRIPE WEBHOOK =================
+app.use(
+  "/api/payment/webhook",
+  express.raw({ type: "application/json" })
+);
+
 // ================= MIDDLEWARE =================
+
 app.use(express.json());
 
 app.use(
@@ -75,7 +82,7 @@ app.use("/api/admin", adminRoutes);
 app.use("/api/certificate", certificateRoutes);
 app.use("/api/preferences", preferenceRoutes);
 app.use("/api/contactus", contactUsRoutes); // ✅ added route
-app.use("/api/coures-reports", reportRoutes);
+app.use("/api/course-reports", reportRoutes);
 
 // ================= 404 HANDLER =================
 app.use((req, res) => {
